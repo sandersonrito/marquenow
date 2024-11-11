@@ -7,33 +7,37 @@
         android:padding="8dp"
         android:background="?attr/selectableItemBackground">
 
-        <TextView
-            android:id="@+id/tvData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Data"
-            android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Data"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tvHora"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hora"
-            android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tvHora"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Hora"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tvEspecialidade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Especialidade"
-            android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tvEspecialidade"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Especialidade"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tvMedico"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Médico"
-            android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tvMedico"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Médico"
+        android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,12 +50,16 @@
                 android:id="@+id/btnEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde_projeto"
+                android:textStyle="bold"
                 android:text="Editar"/>
 
             <Button
                 android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde_projeto"
+                android:textStyle="bold"
                 android:text="Deletar"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
