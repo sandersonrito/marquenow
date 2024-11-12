@@ -4,16 +4,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="20dp"
         android:padding="8dp"
         android:background="?attr/selectableItemBackground">
 
     <TextView
         android:id="@+id/tvData"
         android:layout_width="300dp"
+
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="Data"
-        android:textSize="16sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tvHora"
@@ -21,7 +23,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="Hora"
-        android:textSize="16sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tvEspecialidade"
@@ -29,7 +31,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="Especialidade"
-        android:textSize="16sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tvMedico"
@@ -37,7 +39,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="Médico"
-        android:textSize="16sp" />
+        android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,8 +53,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/verde_projeto"
-                android:textStyle="bold"
-                android:text="Editar"/>
+                android:text="Editar"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnDelete"
@@ -60,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/verde_projeto"
                 android:textStyle="bold"
+                android:textSize="20dp"
                 android:text="Deletar"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>

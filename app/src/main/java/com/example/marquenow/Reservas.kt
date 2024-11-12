@@ -57,11 +57,16 @@ class Reservas : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnReservas).setOnClickListener {
-            reservar()
+            if(reservaId != null){
+                reservar()
+            } else {
+                reservar()
+            }
+
         }
 
         findViewById<Button>(R.id.btnVoltar).setOnClickListener {
-            retornar()
+            finish()
         }
     }
 
@@ -83,7 +88,7 @@ class Reservas : AppCompatActivity() {
             val newRowId = db.insert(ReservaDatabaseHelper.TABLE_NAME, null, values)
             if (newRowId != -1L) {
                 Toast.makeText(this, "Reserva criada com sucesso!", Toast.LENGTH_SHORT).show()
-                retornar()
+                finish()
             } else {
                 Toast.makeText(this, "Erro ao criar reserva.", Toast.LENGTH_SHORT).show()
             }
@@ -96,16 +101,14 @@ class Reservas : AppCompatActivity() {
             )
             if (rowsAffected > 0) {
                 Toast.makeText(this, "Reserva atualizada com sucesso!", Toast.LENGTH_SHORT).show()
-                retornar()
+                finish()
+
             } else {
                 Toast.makeText(this, "Erro ao atualizar reserva.", Toast.LENGTH_SHORT).show()
             }
         }
         db.close()
+
     }
 
-    private fun retornar() {
-        val intent = Intent(this, ListarReservas::class.java)
-        startActivity(intent)
-    }
 }

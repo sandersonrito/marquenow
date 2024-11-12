@@ -25,7 +25,7 @@ class ListarReservas : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerViewReservas)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        loadReservas()
+        //loadReservas()
 
         reservaAdapter = ReservaAdapter(
             this,
@@ -35,6 +35,13 @@ class ListarReservas : AppCompatActivity() {
         )
 
         recyclerView.adapter = reservaAdapter
+        //loadReservas()
+        loadReservas()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        loadReservas()
     }
 
     private fun loadReservas() {

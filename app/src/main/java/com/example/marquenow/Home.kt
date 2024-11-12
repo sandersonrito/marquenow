@@ -1,5 +1,6 @@
 package com.example.marquenow
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -26,6 +27,7 @@ class Home : AppCompatActivity() {
     private fun reserva() {
         val intent = Intent(this, Reservas::class.java)
         startActivity(intent)
+
     }
 
     private fun listarReservas() {

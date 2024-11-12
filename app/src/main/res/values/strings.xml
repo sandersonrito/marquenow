@@ -9,6 +9,7 @@
     <string name="previous">Previous</string>
 
     <string-array name="spinner_options">
+        <item>Escolha a especialidade</item>
         <item>Cardiologia</item>
         <item>Neurologia</item>
         <item>Clinico Geral</item>
@@ -17,6 +18,7 @@
     </string-array>
 
     <string-array name="second_spinner_options">
+        <item>Escolha o médico</item>
         <item>Lucas Sampaio</item>
         <item>Rosiberto </item>
         <item>Tarcisio</item>
