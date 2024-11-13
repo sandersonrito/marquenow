@@ -25,28 +25,26 @@ class ListarReservas : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerViewReservas)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        //loadReservas()
-
         reservaAdapter = ReservaAdapter(
             this,
             mutableListOf(),
             onEditClick = { reserva -> editReserva(reserva) },
             onDeleteClick = { reserva -> deleteReserva(reserva) }
         )
-
         recyclerView.adapter = reservaAdapter
-        //loadReservas()
+
         loadReservas()
     }
 
     override fun onResume() {
         super.onResume()
-        loadReservas()
+        loadReservas() // Recarrega as reservas
     }
 
     private fun loadReservas() {
         val reservas = dbHelper.getAllReservas()
         reservaAdapter.updateData(reservas)
+        reservaAdapter.notifyDataSetChanged() // Notifica o adapter sobre as mudanças
     }
 
     private fun editReserva(reserva: Reserva) {

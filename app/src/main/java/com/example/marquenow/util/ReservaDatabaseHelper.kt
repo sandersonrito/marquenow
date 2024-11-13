@@ -1,10 +1,10 @@
 package com.example.marquenow.util
 
+import Reserva
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import Reserva
 
 class ReservaDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -69,6 +69,20 @@ class ReservaDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABA
         cursor.close()
         db.close()
         return reservas
+    }
+
+    fun updateReserva(reserva: Reserva): Boolean {
+        val db = writableDatabase
+        val contentValues = ContentValues().apply {
+            put(COLUMN_DATA, reserva.data)
+            put(COLUMN_HORA, reserva.hora)
+            put(COLUMN_ESPECIALIDADE, reserva.especialidade)
+            put(COLUMN_MEDICO, reserva.medico)
+        }
+        // Correção: Usando COLUMN_ID na condição de atualização
+        val result = db.update(TABLE_NAME, contentValues, "$COLUMN_ID = ?", arrayOf(reserva.id.toString()))
+        db.close()
+        return result > 0
     }
 
     fun deleteReserva(id: Long) {
